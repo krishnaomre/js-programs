@@ -1,0 +1,45 @@
+
+<!-- Display current date& time -->
+
+
+<!doctype html>
+
+<html>
+
+<head>
+
+</head>
+
+<body>
+
+<h2> display time and date </h2>
+
+<div id="date"> </div>
+
+<div id="time"> </div>
+
+<script>
+
+let date=document.getElementById("date");
+
+let time=document.getElementById("time");
+
+let newDate= new Date();
+
+let years= newDate.getFullYear();
+
+let months= newDate.getMonth(); let todayDate= newDate.getDate();
+
+let hours= newDate.getHours();
+
+let minutes= newDate.getMinutes();
+
+let seconds= newDate.getSeconds();
+
+date.innerHTML=todayDate+"/"+months+"/"+years; time.innerHTML=hours+": "+minutes+":"+seconds;
+
+</script>
+
+</body>
+
+</html>
