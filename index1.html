@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p> choose your lang 
+    <select id="list" onchange=" fav()">
+    <option value ="css"> css</option>
+    <option value="js"> javascript</option>
+    <option value ="css"> DSA</option>
+    <option value ="css"> JAVA</option>
+    </select>
+    </p>
+<p> slected lang is:</p>
+<input type="text" id="fav1" size="20">
+<script>
+    var list = document.getElementById("list");
+    Document.getElementById("fav1").value=list.option[list.selectedIndex].text;
+</script>
+</body>
+</body>
+</html>
