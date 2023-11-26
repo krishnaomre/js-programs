@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        input {
+            padding: 5px;
+            margin: 5px;
+            font-size: 100%;
+        }
+    </style>
+    <script>
+        function total() {
+            var num1 = parseFloat(document.getElementById("Marks1").value);
+            var num2 = parseFloat(document.getElementById("Marks2").value);
+            var num3 = parseFloat(document.getElementById("Marks3").value);
+            var total = num1 + num2 + num3;
+            document.getElementById("demo").innerHTML = "Total: " + total;
+        }
+
+        function avg() {
+            var num1 = parseFloat(document.getElementById("Marks1").value);
+            var num2 = parseFloat(document.getElementById("Marks2").value);
+            var num3 = parseFloat(document.getElementById("Marks3").value);
+            document.getElementById("demo1").innerHTML = "Avg: " + (num1 + num2 + num3) / 3;
+        }
+    </script>
+    <title>Form</title>
+</head>
+<body>
+    <form>
+        <fieldset>
+            <legend>information of student </legend>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name">
+            <br>
+            <label for="gender">male</label>
+            <input type="radio" id="gender" name="1" >
+            <label for="gender">female</label>
+            <input type="radio" id="gender"  name="1">
+            <label for="gender">custom</label>
+            <input type="radio">
+            <label for="Age">Age:</label>
+            <input type="number" id="Age" name="Age"><br>
+            <br>
+            <br>
+            <label for="mail">EMAIL</label>
+            <input type ="email"  id="mail"><br>
+            <br>
+            <label for="phone">Contact No:</label>
+            <input type="tel" id="phone" name="phone" placeholder="+91" maxlength="10">
+        </fieldset>
+        <fieldset>
+            <legend>Student Marks</legend>
+            <label for="sub">Subject:</label>
+            <select id="sub" name="sub">
+                <option value="Sci">c</option>
+                <option value="Commerce">dsa</option>
+                <option value="Arts">web</option>
+            </select>
+            <br>
+            <label for="Marks1">Marks 1:</label>
+            <input type="number" id="Marks1" name="Marks1">
+            <br>
+            <label for="Marks2">Marks 2:</label>
+            <input type="number" id="Marks2" name="Marks2">
+            <br>
+            <label for="Marks3">Marks 3:</label>
+            <input type="number" id="Marks3" name="Marks3">
+        </fieldset>
+    </form>
+    <button onclick="total()">Total</button>
+    <button onclick="avg()">Avg</button>
+    <br>
+    <label>Total:</label>
+    <p id="demo"></p>
+    <br>
+    <label>Avg:</label>
+    <p id="demo1"></p>
+</body>
+</html>
